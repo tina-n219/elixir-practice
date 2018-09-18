@@ -28,4 +28,10 @@ defmodule Practice.PracticeTest do
   end
 
   # TODO: Add two unit tests for palindrome.
+  test "check if some string is a palindrome" do
+    assert palindrome("mom") == true
+    assert palindrome("dad") == true
+    assert palindrome("tina") == false
+    assert palindrome("webdevhurts") == false
+  end
 end
