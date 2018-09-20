@@ -26,16 +26,7 @@ defmodule Practice.Calc do
   end
 
 
-  def multiAndDiv(list) do
-
-  end
-
-  def addAndSub(list) do
-
-  end
-
-  def returnVal(list) do
-
-  end
-
+  # multiply and divid by searching :/
+  # add and subtract by searching list :/
+  # return final value :/
 end
