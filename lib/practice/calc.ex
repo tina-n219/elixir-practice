@@ -21,4 +21,13 @@ defmodule Practice.Calc do
     # |> reverse to prefix
     # |> evaluate as a stack calculator using pattern matching
   end
+
+  def tag_tokens(list) do
+
+  Enum.map(list, fn(x) -> 
+  if x == "+" || x == "-" || x == "*" || x == "/" do
+    {:op, x}
+  else
+    {:num, String.to_integer(x)}
+  end
 end
