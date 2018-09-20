@@ -9,7 +9,7 @@ defmodule Practice.Calc do
     # but doesn't need to handle parens.
     expr
     |> String.split( )
-    |> 
+  
 
     # Hint:
     # expr
