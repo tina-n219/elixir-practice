@@ -10,9 +10,6 @@ defmodule Practice.Calc do
     expr
     |> String.split
     |> tag_tokens
-    |> multiAndDiv
-    |> addAndSub
-    |> returnVal
   end
 
   def tag_tokens(list) do
