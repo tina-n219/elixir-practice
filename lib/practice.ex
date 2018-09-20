@@ -18,11 +18,11 @@ defmodule Practice do
 
   def factor(x) do
     # Maybe delegate this too.
-    [1,2,x]
+    Practice.Factor.factor(x)
   end
 
-  # TODO: Add a palindrome? function.
-  def palindrome(x) do
-    String.reverse(x) == x;
+  # TODO: Add a palindrome? function
+  def palindrome(str) do
+    String.reverse(str) == str;
   end
 end
