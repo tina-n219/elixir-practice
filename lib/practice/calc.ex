@@ -13,21 +13,29 @@ defmodule Practice.Calc do
     |> multiAndDiv
     |> addAndSub
     |> returnVal
-    # Hint:
-    # expr
-    # |> split
-    # |> tag_tokens  (e.g. [+, 1] => [{:op, "+"}, {:num, 1.0}]
-    # |> convert to postfix
-    # |> reverse to prefix
-    # |> evaluate as a stack calculator using pattern matching
   end
 
   def tag_tokens(list) do
-
-  Enum.map(list, fn(x) -> 
-  if x == "+" || x == "-" || x == "*" || x == "/" do
-    {:op, x}
-  else
-    {:num, String.to_integer(x)}
+    Enum.map(list, fn(x) -> 
+      if (x == "+" || x == "-" || x == "*" || x == "/") do
+        {:op, x}
+      else
+        {:num, String.to_integer(x)}
+        end
+    end)
   end
+
+
+  def multiAndDiv(list) do
+
+  end
+
+  def addAndSub(list) do
+
+  end
+
+  def returnVal(list) do
+
+  end
+
 end
