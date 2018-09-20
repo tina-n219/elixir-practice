@@ -1,8 +1,23 @@
 defmodule Practice.Factor do
     def factor(x) do
-        isPrime(x)
+        i = 2
+        factor(x, i, [])
     end
 
+    def factor(x, i, list) when x >= i do
+        if (isPrime(i) && (rem(x, i) == 0)) do
+            factor(div(x, i), i, [i | list])
+        else 
+            factor(x, i + 1, list)
+        end
+    end
+
+    def factor(x, i, list) when x <= 1 do
+    # when we have reduced the initial value down to one, 
+    # return the list of prime factors
+        Enum.reverse(list)
+    end
+#---------------------------------------------------------------------------------------------
     def isPrime(x) do
         # where i will try and create a for loop type function
        isPrime(2,:math.sqrt(x), true, x)
