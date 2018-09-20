@@ -8,9 +8,11 @@ defmodule Practice.Calc do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
     expr
-    |> String.split( )
-  
-
+    |> String.split
+    |> tag_tokens
+    |> multiAndDiv
+    |> addAndSub
+    |> returnVal
     # Hint:
     # expr
     # |> split
